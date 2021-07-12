@@ -19,6 +19,7 @@ export default defineComponent({
           <br />
           <span class="text-indigo-600">Let's start your test! Good luck!</span>
         </h2>
+        <button-repo title="Go to tasks" />
       </div>
     </div>
 </template>
