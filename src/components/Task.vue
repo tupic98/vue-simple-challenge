@@ -77,6 +77,7 @@
                 transition
                 cursor-pointer
               "
+              @click="$emit('open:delete', currentTask.id)"
             />
             <PencilIcon
               class="
@@ -96,25 +97,13 @@
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { ref, watch } from "vue";
 import { TrashIcon, PencilIcon } from "@heroicons/vue/solid";
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogOverlay,
-  DialogTitle,
-} from "@headlessui/vue";
 
 export default {
   components: {
     TrashIcon,
     PencilIcon,
-    TransitionRoot,
-    TransitionChild,
-    Dialog,
-    DialogOverlay,
-    DialogTitle,
   },
   props: {
     task: {
@@ -149,9 +138,16 @@ export default {
       isOpen.value = true;
     };
 
-    const currentTask = reactive({
+    const currentTask = ref({
       ...props.task,
     });
+
+    watch(
+      () => props.task,
+      (task) => {
+        currentTask.value = task;
+      }
+    );
 
     return {
       currentTask,
