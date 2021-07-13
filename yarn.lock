@@ -9947,6 +9947,11 @@ vue-router@^4.0.10:
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.14"
 
+vue3-click-away@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue3-click-away/-/vue3-click-away-1.2.1.tgz#3645b2671db152d53c95b936540f7e449616f5d4"
+  integrity sha512-8GA3rfFlwIS9oCqFzqGdk7CvUz7JwvoiBJQLW4BxrVQEgzTB9oo/lWMazz4XwouA8tnquIHa2ZBHLix689RpAg==
+
 vue@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.1.4.tgz#120d6818c51eaa35d0879e5bc1cff60135bc69fd"
