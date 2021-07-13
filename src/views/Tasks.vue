@@ -72,7 +72,7 @@ export default {
     TaskList,
   },
   setup() {
-    let taskList = ref([
+    const taskList = ref([
       {
         id: 1,
         name: "Develop the Home page",
